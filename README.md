@@ -20,6 +20,9 @@ public bool GetHashCode(T obj);
 The Equals() and operator methods are called in the important combinations, and it is asserted, that their result is correct. The values tried are the instances `first`, `second` and `third`, `NULL` (or `default(T)`), and for `Equals(object)` also an instance of `object`.
 
 ## How do I use it?
+Download the nuget package EqualityAssert using the nuget package manager or the console:
+`Install-Package MiP.EqualityAssertion`
+
 In your test, create three different instances of your class, where the first and second must be value-equal (`.Equals()` should return true).
 Then call `EqualityAssert.EqualityMembers(first, second, third)`.
 
