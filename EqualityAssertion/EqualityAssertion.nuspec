@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package >
+  <metadata>
+    <id>MiP.EqualityAssertion</id>
+    <version>$version$</version>
+    <title>Assert that equality members are implemented correctly.</title>
+    <authors>Michael Praschl</authors>
+    <!--<licenseUrl></licenseUrl>
+    <projectUrl></projectUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Tests .Equals(), .Equals&lt;&gt;(), Operators, GetHashCode() and EqualityComparer.</description>
+    <releaseNotes>First release.</releaseNotes>
+    <summary>Used in tests to assert correct implementation of equality members with as little code as possible, while getting the coverage of the equality members to 100%.</summary>
+    <copyright>Copyright 2015</copyright>
+    <tags>EqualityAssert EqualityAssertion Equal Equality Assert Test</tags>
+    <dependencies>
+      
+    </dependencies>
+  </metadata>
+</package>
