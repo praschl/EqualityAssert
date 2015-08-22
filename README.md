@@ -22,7 +22,7 @@ The Equals() and operator methods are called in the important combinations, and 
 ## How do I use it?
 Download the nuget package EqualityAssert using the nuget package manager or the console:
 ```bash
-Install-Package MiP.EqualityAssertion`
+Install-Package MiP.EqualityAssertion
 ```
 
 In your test, create three different instances of your class, where the first and second must be value-equal (`.Equals()` should return true).
