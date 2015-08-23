@@ -26,7 +26,7 @@ Install-Package MiP.EqualityAssertion
 ```
 
 In your test, create three different instances of your class, where the first and second must be value-equal (`.Equals()` should return true).
-Then call `EqualityAssert.EqualityMembers(first, second, third)`.
+Then call `EqualityAssert.EqualityMembers(first, second, third)`. If an issue with the implementation is found, an `AssertionException` is raised.
 
 ## Example code (yes RLY)
 ```C#
