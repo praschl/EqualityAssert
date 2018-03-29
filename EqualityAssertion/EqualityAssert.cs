@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Runtime.ExceptionServices;
+
 using MiP.EqualityAssertion.Helpers;
 
 // ReSharper disable UnusedParameter.Local
@@ -35,11 +37,11 @@ namespace MiP.EqualityAssertion
                 throw new ArgumentNullException(nameof(third));
 
             if (ReferenceEquals(first, second))
-                throw new ArgumentException("first and second argument should be equal, but not the same.");
+                throw new ArgumentException("first and second argument should be equal by value, but not by reference (equivalent, but not the same).");
             if (ReferenceEquals(first, third))
-                throw new ArgumentException("first and third argument should be different.");
+                throw new ArgumentException("first and third argument should differ by reference and by value.");
             if (ReferenceEquals(second, third))
-                throw new ArgumentException("second and third argument should be different.");
+                throw new ArgumentException("second and third argument should differ by reference and by value.");
 
             try
             {
@@ -54,7 +56,7 @@ namespace MiP.EqualityAssertion
             }
             catch (TargetInvocationException ex)
             {
-                throw ex.InnerException;
+                ExceptionDispatchInfo.Capture(ex.InnerException).Throw();
             }
         }
 
